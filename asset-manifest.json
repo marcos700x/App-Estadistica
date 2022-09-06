@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/App-Estadistica/static/css/main.5f97ffb8.css",
+    "main.js": "/App-Estadistica/static/js/main.50fdb0ae.js",
+    "index.html": "/App-Estadistica/index.html",
+    "main.5f97ffb8.css.map": "/App-Estadistica/static/css/main.5f97ffb8.css.map",
+    "main.50fdb0ae.js.map": "/App-Estadistica/static/js/main.50fdb0ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f97ffb8.css",
+    "static/js/main.50fdb0ae.js"
+  ]
+}
