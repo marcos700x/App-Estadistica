@@ -32,14 +32,14 @@ const InfoDatos = () => {
     <p className='text-break mb-1'>
     {datosObservados.toString()}
     </p>
-    <button className='btn btn-secondary' title='Copiar al portapapeles' onClick={() => navigator.clipboard.write(datosObservados)}>
+    <button className='btn btn-secondary' title='Copiar al portapapeles' onClick={() => navigator.clipboard.writeText(datosObservados.toString())}>
       <FaCopy/>
       </button>
     </div>
      <hr />
   <div className="row">
     <div className="col">
-    <ul>
+    <ul className='p-0'>
     <li>
   <p className="lead fs-5"><b className='fs-5'>Media Aritmetica: </b>{mediaAritmetica}</p>
     </li>
@@ -55,21 +55,21 @@ const InfoDatos = () => {
   </ul>
     </div>
     <div className="col">
-    <ul>
+    <ul className='p-0'>
     <li>
   <p className="lead fs-5"><b className='fs-5'>Rango: </b>{rango}</p>
     </li>
-    <li>
+    <li className='row'>
 
-  <div className="row">
-    <div className="col-auto">
+  <div className="row mb-3">
+    <div className="col-md-12 col-xl-auto">
     <p className='fs-5 mb-0'>Numero de clases recomendado: </p>
     </div>
-    <div className="col-2 ms-0 me-0 p-0" >
-    <input className='form-control text-center' type="number"  disabled={disableEdit}  defaultValue={numero_clases(datosObservados)} onChange={handleChangeInput}/>
+    <div className="col-3 ms-0 me-0 p-0 " >
+    <input className='form-control text-center ms-3 ms-xl-0' type="number"  disabled={disableEdit}  defaultValue={numero_clases(datosObservados)} onChange={handleChangeInput}/>
     </div>
-    <div className="col-2 ps-1 p-0">
-    <button onClick={handleDisableInput} className={disableEdit ? 'btn btn-secondary' : 'btn btn-success'}>
+    <div className="col-auto ps-1 p-0">
+    <button onClick={handleDisableInput} className={`${disableEdit ? 'btn btn-secondary' : 'btn btn-success'} ms-3 ms-xl-1 `}>
       {disableEdit ?<FaPencilAlt/>  :  <FaCheck/> }
     </button>
     </div>

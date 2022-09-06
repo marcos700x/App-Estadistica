@@ -65,7 +65,7 @@ const Input = () => {
   </div>
   <p className='mt-1 mb-2'>Ingresa los datos (números) a evaluar separados por una coma. Ej: 1,2,3,4 </p>
   <div className="form-check">
-  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" ref={refCheckboxHistograma} onChange={handleCheckbox}/>
+  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" ref={refCheckboxHistograma}  onChange={handleCheckbox}/>
   <label className="form-check-label fs-6" htmlFor="flexCheckDefault">
     Mostrar Histograma
   </label>
