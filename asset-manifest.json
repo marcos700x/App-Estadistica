@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/App-Estadistica/static/css/main.5f97ffb8.css",
-    "main.js": "/App-Estadistica/static/js/main.50fdb0ae.js",
+    "main.js": "/App-Estadistica/static/js/main.af559588.js",
     "index.html": "/App-Estadistica/index.html",
     "main.5f97ffb8.css.map": "/App-Estadistica/static/css/main.5f97ffb8.css.map",
-    "main.50fdb0ae.js.map": "/App-Estadistica/static/js/main.50fdb0ae.js.map"
+    "main.af559588.js.map": "/App-Estadistica/static/js/main.af559588.js.map"
   },
   "entrypoints": [
     "static/css/main.5f97ffb8.css",
-    "static/js/main.50fdb0ae.js"
+    "static/js/main.af559588.js"
   ]
 }
