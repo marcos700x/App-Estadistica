@@ -22,9 +22,18 @@ const Input = () => {
     }
     const handleCheckbox = () => {
 
-      if(refCheckboxHistograma.current.checked) setVerGraficas({...verGraficas, histograma: true})
-      if(refCheckboxPoligono.current.checked) setVerGraficas({...verGraficas, poligono: true})
-
+      if(refCheckboxHistograma.current.checked && refCheckboxPoligono){
+        setVerGraficas({histograma: true, poligono: true})
+      }
+      if(refCheckboxHistograma.current.checked && !refCheckboxPoligono.current.checked){
+        setVerGraficas({histograma: true, poligono: false})
+      }
+      if(!refCheckboxHistograma.current.checked && refCheckboxPoligono.current.checked){
+        setVerGraficas({histograma: false, poligono: true})
+      }
+      if(!refCheckboxHistograma.current.checked && !refCheckboxPoligono.current.checked){
+        setVerGraficas({histograma: false, poligono: false})
+      }
     }
  
     useEffect(() => {
@@ -39,7 +48,7 @@ const Input = () => {
             amplitud: formula_amplitud(formula_rango(datosObservados), numero_clases(datosObservados))
         })
 
-    }, [datosObservados, setConjuntoDatos])
+    }, [datosObservados])
 
 
 
