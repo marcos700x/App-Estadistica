@@ -17,6 +17,7 @@ const InfoDatos = () => {
     setDisableEdit(!disableEdit)
   }
   const handleChangeInput = (e) => {
+    if(Number(e.target.value) <= 0) return
     setConjuntoDatos({
       ...conjuntoDatos,
       numeroClases: e.target.value,
@@ -28,7 +29,7 @@ const InfoDatos = () => {
     return (
     <>
     <div className="col lead fs-5">
-    <b className='fs-4'>Datos observados: </b>
+    <b className='fs-4'>Datos ordenados: </b>
     <p className='text-break mb-1'>
     {datosObservados.toString()}
     </p>
@@ -38,13 +39,13 @@ const InfoDatos = () => {
     </div>
      <hr />
   <div className="row">
-    <div className="col">
+    <div className="col-12 col-md-6">
     <ul className='p-0'>
     <li>
   <p className="lead fs-5"><b className='fs-5'>Media Aritmetica: </b>{mediaAritmetica}</p>
     </li>
     <li>
-    <p className="lead fs-5"><b className='fs-5'>Moda: </b>{moda.length < 1 ? "No hay moda" : moda.length === 2 ? `${moda} (Bimodal)` : moda.length > 2 ? `${moda} (Multimodal)` : moda}</p>
+    <p className="lead fs-5 text-break"><b className='fs-5'>Moda: </b>{moda.length < 1 ? "No hay moda" : moda.length === 2 ? `${moda} (Bimodal)` : moda.length > 2 ? `${moda} (Multimodal)` : moda}</p>
     </li>
     <li>
   <p className="lead fs-5"><b className='fs-5'>Mediana: </b>{mediana}</p>
@@ -54,7 +55,7 @@ const InfoDatos = () => {
     </li>
   </ul>
     </div>
-    <div className="col">
+    <div className="col-12 col-md-6">
     <ul className='p-0'>
     <li>
   <p className="lead fs-5"><b className='fs-5'>Rango: </b>{rango}</p>
@@ -80,7 +81,7 @@ const InfoDatos = () => {
     <p className="lead fs-5"><b className='fs-5'>Amplitud: </b>{amplitud}</p>
     </li>
     <li>
-  <p className="lead fs-5"><b className='fs-5'>Desviacion Estandar: </b>{desviacionEstandar}</p>
+  <p className="lead fs-5 text-break"><b className='fs-5'>Desviacion Estandar: </b>{desviacionEstandar}</p>
     </li>
   </ul>
     </div>

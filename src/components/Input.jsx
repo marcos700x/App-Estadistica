@@ -9,7 +9,7 @@ const Input = () => {
 
     const refCheckboxHistograma = useRef(null);
     const refCheckboxPoligono = useRef(null);
-    const {  setConjuntoDatos, datosObservados, setDatosObservados, setVerGraficas } = useContext(DataContext);
+    const {  setConjuntoDatos, datosObservados, setDatosObservados, setVerGraficas, verGraficas } = useContext(DataContext);
     const input = useRef(null);
 
 
@@ -22,18 +22,8 @@ const Input = () => {
     }
     const handleCheckbox = () => {
 
-      if(refCheckboxHistograma.current.checked && refCheckboxPoligono){
-        setVerGraficas({histograma: true, poligono: true})
-      }
-      if(refCheckboxHistograma.current.checked && !refCheckboxPoligono.current.checked){
-        setVerGraficas({histograma: true, poligono: false})
-      }
-      if(!refCheckboxHistograma.current.checked && refCheckboxPoligono.current.checked){
-        setVerGraficas({histograma: false, poligono: true})
-      }
-      if(!refCheckboxHistograma.current.checked && !refCheckboxPoligono.current.checked){
-        setVerGraficas({histograma: false, poligono: false})
-      }
+      if(refCheckboxHistograma.current.checked) setVerGraficas({...verGraficas, histograma: true})
+      if(refCheckboxPoligono.current.checked) setVerGraficas({...verGraficas, poligono: true})
 
     }
  
