@@ -56,11 +56,6 @@ const TablaFrecuencias = () => {
                 
         }, [conjuntoDatos, amplitud])
 
-        useEffect(() => {
-            console.log('???')
-        },[conjuntoDatos, amplitud, numeroClases, datosObservados, setDataGrafica, longitudDatos, DataContext])
-
-
 
     if(datosObservados.length === 0) return;
 

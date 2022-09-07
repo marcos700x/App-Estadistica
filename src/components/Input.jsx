@@ -39,7 +39,7 @@ const Input = () => {
             amplitud: formula_amplitud(formula_rango(datosObservados), numero_clases(datosObservados))
         })
 
-    }, [datosObservados])
+    }, [datosObservados, setConjuntoDatos])
 
 
 

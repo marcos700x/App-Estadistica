@@ -1,7 +1,7 @@
 import React from 'react'
 import { DataContext } from '../Context/DataContext'
 import { FaPencilAlt, FaCheck, FaCopy } from 'react-icons/fa';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { formula_amplitud, numero_clases } from '../data/Formulas';
 
 const InfoDatos = () => {
